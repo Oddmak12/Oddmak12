@@ -1,0 +1,27 @@
+extern 申明外部变量
+
+strcoy(odd,"haloworld");
+
+ctrl c k 全注释
+ctrl u k 取消全注释
+ 
+枚举常量
+enum Color
+{
+    Blue
+    Red
+    Yellow
+};   ！！有封号
+……
+enum Color odd = Blue
+
+字符串
+"Oddmak1r"
+char odd[] = "Oddmak1r" 有结束符'\0'
+odd = {'a','b','\0'} = {97,98,0}
+sizeof(odd) = 3
+strlen(odd) = 2
+odd = {'a','b'} = {97,98,}
+sizeof(odd) = 2
+strlen(odd) = ¿
+"\xdd \ddd" 表示十六进制 八进制后对应的字符
