@@ -24,7 +24,7 @@ strlen(odd) = 2
 odd = {'a','b'} = {97,98,}
 sizeof(odd) = 2
 strlen(odd) = ¿
-若里面位数字 则
+若里面位数字 则记录为sizeof(int) * 个数
 "\xdd \ddd" 表示十六进制 八进制后对应的字符
 
 正数的原码 反码 补码 都一样
