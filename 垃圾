@@ -24,4 +24,5 @@ strlen(odd) = 2
 odd = {'a','b'} = {97,98,}
 sizeof(odd) = 2
 strlen(odd) = ¿
+若里面位数字 则
 "\xdd \ddd" 表示十六进制 八进制后对应的字符
