@@ -119,4 +119,6 @@ switch(整形)
 	case 2:
 		;
 从case进入后，见到break出去！！
+	default:
+		printf("输入错误！")；
 	
