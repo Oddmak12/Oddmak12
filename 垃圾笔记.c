@@ -110,3 +110,13 @@ int main()
 struct Book* odd = &b1;
 strcpy(b1.name,"好的吧");
 b1.price = 888;
+	
+switch语句
+switch(整形)
+{
+	case 1:
+		;
+	case 2:
+		;
+从case进入后，见到break出去！！
+	
