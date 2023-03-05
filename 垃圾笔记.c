@@ -94,4 +94,16 @@ printf("%p", &a) == printf("%p", p);
 char a = ‘w’;
 char* p = &a;
 
-
+结构体
+struct Book
+{
+	char name[20];
+	short price;
+};      !!!!一定有分号
+int main()
+{
+	struct Book b1 = {"和路飞开派对",55};
+	printf("书名：%s\n",b1.name);
+	printf("价格：%d\n",b1.price);
+	return 0;
+}
