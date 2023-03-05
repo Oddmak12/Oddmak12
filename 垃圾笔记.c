@@ -107,3 +107,6 @@ int main()
 	printf("价格：%d\n",b1.price);
 	return 0;
 }
+struct Book* odd = &b1;
+strcpy(b1.name,"好的吧");
+b1.price = 888;
