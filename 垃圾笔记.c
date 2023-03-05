@@ -79,3 +79,19 @@ Max (int x,int y)
 	else 
 		return y;
 }
+
+int main()
+{
+	int a = 10;
+	printf("%p", &a);    输出十六进制 地址
+	return 0;
+}
+int a = 20;
+int* p = &a;
+printf("%p", &a) == printf("%p", p);
+*p = 20 == a = 20
+
+char a = ‘w’;
+char* p = &a;
+
+
