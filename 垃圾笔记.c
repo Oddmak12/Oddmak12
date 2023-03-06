@@ -174,7 +174,9 @@ Sleep(1000) 睡眠1000ms
 system("cls");
 
 
-	
+== 不可以比较两个字符串！
+#include<string.h>
+    strcmp(zifuchuan,"odd")若一致返回1，不一致返回0！
 	
 	
 	
