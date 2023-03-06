@@ -126,7 +126,7 @@ switch(整形)
 遇到break直接跳出这个while循环，执行下面的语句
 遇到continue终止本次循环，continue后的语句不会被执行，进行下一轮循环
 			
-getchar() putchar()
+getchar() putchar() 用法
 #include<stdio.h>
 int main()
 {
