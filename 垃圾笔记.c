@@ -122,3 +122,19 @@ switch(整形)
 	default:
 		printf("输入错误！")；
 	
+在while循环中 
+遇到break直接跳出这个while循环，执行下面的语句
+遇到continue终止本次循环，continue后的语句不会被执行，进行下一轮循环
+			
+getchar() putchar()
+#include<stdio.h>
+int main()
+{
+	int char = 0
+	while((ch=getchar())!=EOF)
+	{
+		putchar(ch);
+		\\printf("%c",ch);
+		return 0;
+	}
+}	
