@@ -176,7 +176,7 @@ system("cls");
 
 == 不可以比较两个字符串！
 #include<string.h>
-    strcmp(zifuchuan,"odd")若一致返回1，不一致返回0！
+    strcmp(zifuchuan,"odd")若一致返回0，不一致返回1！
 	
 	
 	
