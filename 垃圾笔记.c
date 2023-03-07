@@ -72,6 +72,7 @@ int main()                                        输出结果为2,3,4,5,6,
 #define MAX 100;  定义标识常量
 
 #define Max(X,Y) (X>Y?X:Y)
+等价于
 Max (int x,int y)
 {
     if (x > y)
