@@ -178,6 +178,15 @@ system("cls");
 == 不可以比较两个字符串！
 #include<string.h>
     strcmp(zifuchuan,"odd")若一致返回0，不一致返回1！
+
+头文件得调用
+写一个odd.h的头文件
+int Odd(int a,int b) 写一个申明
+再写一个odd.c的源文件
+int Odd(int a,int b)
+{
+	int z = x + y;
+	return z;
+}
 	
-	
-	
+#include"odd.h"
