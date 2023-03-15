@@ -190,3 +190,35 @@ int Odd(int a,int b)
 }
 	
 #include"odd.h"
+		
+冒泡排序法，两者比较
+void bubble(int arr[],int sz)
+{
+	int i = 0;
+	for (i = 0 ;i< sz - 1; i++)
+	{
+		int flag = 1;
+		int j = 0;
+		for(j = 0;j < sz;j++)
+		{
+			if(arr[j]>arr[j+1])
+			{
+				int temp = arr[j];
+				arr[j] = arr[j+1];
+				arr[j] = temp;
+				flag = 0;
+			}
+		}
+		if (flag == 1)
+			break;
+	}
+}
+		
+	
+	
+	
+	
+	
+	
+	
+	
