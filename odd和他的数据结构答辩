@@ -1,0 +1,36 @@
+单链表实验一号    头插法
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<stdlib.h>
+#include<malloc.h>
+
+typedef struct odd
+{
+	int data;
+	struct odd* next;
+}odd, * oddd;
+
+oddd shuru(oddd L)
+{
+	L = (odd*)malloc(sizeof(odd*));
+	oddd q;
+	int x;
+	scanf("%d", &x);
+	while (x != 9999)
+	{
+		q = (odd*)malloc(sizeof(odd*));
+		q->data = x;
+		q->next = L->next;
+		L->next = q;
+		scanf("%d", &x);
+	}
+	return L;
+}
+int main()
+{
+	odd temp;
+	oddd dizhi = &temp;
+	dizhi = shuru(dizhi);
+	printf("%d", dizhi->next->data);
+}
+单链表实验一号    头插法
