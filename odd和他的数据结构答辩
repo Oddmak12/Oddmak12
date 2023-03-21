@@ -88,4 +88,50 @@ bool DeQueue(LinkQueue Q, int* x);
 	free(q);
 	return true;
 }
+************************************************************************************************************************************************************
+************************************************************************************不带头节点*****************************************************************
+
+//初始化
+void InitQueue(LinkQueue Q)
+{
+	Q.front = Q.rear = NULL;
+}
+// 判断是否为空
+bool IsEmpty (LinkQueue Q)
+{
+	if (Q.front == NULL)
+		return true;
+	else
+		return false;
+}
+//入队
+void EnQueue(LinkQueue Q, int x);
+{
+	LinkList* s = (LinkList*)malloc(sizeof(LinkList*));
+	s->data = x;
+	s->next = NULL;
+	if (Q.front == NULL)
+		Q.front = Q.rear = s;
+	else
+	{
+		Q.rear->next = s;
+		Q.rear = s;
+	}
+}
+//出队
+bool DeQueue(LinkQueue Q, int* x);
+{
+	if (Q.rear == NULL)
+		return false;
+	LinkList* q = Q.front;
+	x = q->data;
+	Q.front = q->next;
+	if (q == Q.rear)
+	{
+		Q.rear = NULL;
+		Q.front = NULL;
+	}
+	free(q);
+	return true;
+}
 
