@@ -135,3 +135,48 @@ bool DeQueue(LinkQueue Q, int* x);
 	return true;
 }
 
+——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+                                                                         三种括号的配对问题
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<stdlib.h>
+#include<malloc.h>
+typedef struct Odd
+{
+	char a[100];
+	int p;
+}Odd;
+************************************************************************************************************************************************************
+可能会用到的函数
+void InitStack(Odd& S); 初始化这个栈
+bool EmptyStack(Odd S); 判断是否为空
+bool Push(Odd& S, char x); 把x压入栈
+bool Pop(Odd& S, char& x);从栈中弹出x
+************************************************************************************************************************************************************
+bool peidui(char q[], int length)
+{
+	Odd temp;
+	InitStack(temp);
+	for (i = 0; i < length; i++)
+	{
+		if (q[i]=='(' || q[i]=='[' || q[i]=='{'
+			push(temp,q[i]);
+		else
+		{
+			if (EmptyStack(temp))
+			{
+				return false;
+			}
+			char gjr;
+			Pop(temp; gjr);
+			if (q[i] == ')' && gjr != '(')
+				return false;
+			if (q[i] == ']' && gjr != '[')
+				return false;
+			if (q[i] == '}' && gjr != '{')
+				return false;
+		}
+	}
+	return EmptyStack(temp);
+}
+
