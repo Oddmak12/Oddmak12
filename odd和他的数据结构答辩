@@ -178,5 +178,33 @@ bool peidui(char q[], int length)
 		}
 	}
 	return EmptyStack(temp);
-}
+}**************
 
+************************************************************************************************************************************************************
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<stdlib.h>
+#include<malloc.h>
+typedef struct Odd
+{
+	char a[MAX];
+	int front,rear,tag;
+}Odd;
+bool Push(Odd&s, char temp)
+{
+	if (s.tag == 1 && s.front == s.rear)
+		return false;
+	s.rear = (s.rear + 1) % MAX;
+	s.a[s.rear] = temp;
+	tag = 1;
+	return ture;
+}
+bool Pop(Odd& s, char& temp)
+{
+	if (s.tag == 0 && s.front == s.rear)
+		return false;
+	s.front = (s.front + 1) % MAX;
+	temp = s.a[s.front];
+	tag = 0;
+	return true;
+}
