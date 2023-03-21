@@ -35,3 +35,56 @@ int main()
 	printf("%d", dizhi->next->data);
 }
 ************************************************************************************************************************************************************
+************************************************************************************************************************************************************
+这个重点是front是指向头结点的指针，rear指向最后一个结点！
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<stdlib.h>
+#include<malloc.h>
+typedef struct LinkList
+{
+	int data;
+	struct LinkList* next;
+}LinkList;
+typedef struct
+{
+	LinkList* front, *rear;
+}LinkQueue;
+//初始化****************************************************************************************************************************************************
+！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！不带头节点！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+void InitQueue(LinkQueue Q)
+{
+	Q.front = Q.rear = (LinkList*)malloc(sizeof(LinkList*));
+	Q.front->next = NULL;
+}
+// 判断是否为空***********************************************************************************************************************************************
+bool IsEmpty (LinkQueue Q)
+{
+	if (Q.front == Q.rear)
+		return true;
+	else
+		return false;
+}
+//入队****************************************************************************************************************************************************
+void EnQueue(LinkQueue Q, int x);
+{
+	LinkList* s = (LinkList*)malloc(sizeof(LinkList*));
+	s->data = x;
+	s->next = NULL;
+	Q.rear->next = s;
+	Q.rear = s;
+}
+//出队****************************************************************************************************************************************************
+bool DeQueue(LinkQueue Q, int* x);
+{
+	if (Q.rear == Q.front)
+		return false;
+	LinkList* q = Q.front->next;
+	x = q->data;
+	Q.front->next = q->next;
+	if (q == Q.rear)
+		Q.rear = Q.front;
+	free(q);
+	return true;
+}
+
